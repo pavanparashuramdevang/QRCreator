@@ -1,0 +1,121 @@
+{%extends 'base.html'%}
+
+{%block style%}
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+
+<style>
+.column {
+  float: left;
+  width: 50%;
+  padding-left: 2cm;
+  padding-top: 2cm;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+</style>
+
+
+
+{%endblock%}
+
+
+
+
+
+
+
+
+{% block active %}
+
+<li ><a href="{{url_for('index') }}">Home</a></li>
+<li><a href="{{url_for('about')}}">About</a></li>
+<li><a href="{{url_for('qrcodes')}}">QrCodes</a></li>
+
+{%endblock%}
+
+{% block image%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<h1 style="padding:20px"></h1> -->
+<!-- <div class="form_container_index">
+
+    <div class="form-group">
+<div class="form-group">
+<div class="card" style="width: 18rem;">
+    
+    <img class="card-img-top" src="{{ url_for('static', filename='qr.png') }}" alt="QR Code">
+    <div class="card-body">
+
+      <a  style="margin: 7px;margin-left: 50px;" class="btn btn-primary" href="{{ url_for('static', filename='qr.png') }}" download="">
+        download QR
+    </a>
+    </div>
+
+    </div>
+</div> -->
+
+<!-- </div>
+</div> -->
+
+{%endblock %}
+
+
+
+
+{%block form%}
+<br>
+<h1 color="white">the data fetched from database</h1>
+<h1></h1>
+<div class="row">
+  <div class="column" style="color: red;"> TimeStamp &emsp; &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Data </div>
+  <div class="column" style="color:red">QRCode</div>
+</div> 
+{%for val in result%}
+<div class="row">
+    <div class="column" > {{val[2]}} &emsp; &emsp; &emsp;{{val[0]}}</div>
+    <div class="column"><img src= "{{url_for('static', filename=val[1])}}" alt={{val[1]}}></div>
+  </div> 
+
+{%endfor%}
+
+{% endblock form%}
+{%block footer%}
+{%endblock%}

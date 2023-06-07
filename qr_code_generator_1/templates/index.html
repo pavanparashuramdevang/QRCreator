@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+
+{%block style%}
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+{%endblock%}
+
+
+
+{% block active %}
+
+<li class="active"><a href="{{url_for('index') }}">Home</a></li>
+<li ><a href="{{url_for('about')}}">About</a></li>
+
+{%endblock%}
+
+
+{%block form%}
+<h1 style="padding: 30px;"></h1>
+
+<div class="form_container_index">
+<form action="{{ url_for('generate') }}" method="POST">
+    <div class="form-group">
+      <label for="qrdata">Enter Data:</label><br>
+      <input type="text" name="qrdata" id="qrdata" required><br>
+  
+      <small id="emailHelp" class="form-text text-muted">We  store data </small>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Generate QR Code</button>
+</form>
+ 
+</div>
+
+
+{% endblock form%}

@@ -1,0 +1,57 @@
+{%extends 'base.html'%}
+
+
+{% block active %}
+
+<li ><a href="{{url_for('index') }}">Home</a></li>
+<li><a href="{{url_for('about')}}">About</a></li>
+<li><a href="{{url_for('qrcodes')}}">QrCodes</a></li>
+
+{%endblock%}
+
+{% block image%}
+<h1 style="padding:20px"></h1>
+<div class="form_container_index">
+
+    <div class="form-group">
+<div class="form-group">
+<div class="card" style="width: 18rem;">
+    
+    <img class="card-img-top" src="{{ url_for('static', filename='qr.png') }}" alt="QR Code">
+    <div class="card-body">
+
+      <a  style="margin: 7px;margin-left: 50px;" class="btn btn-primary" href="{{ url_for('static', filename='qr.png') }}" download="">
+        download QR
+    </a>
+    </div>
+
+    </div>
+</div>
+
+</div>
+</div>
+
+{%endblock %}
+
+
+
+
+{%block form%}
+<h1 style="padding: 30px;"></h1>
+
+<div class="form_container_index">
+<form action="{{ url_for('generate') }}" method="POST">
+    <div class="form-group">
+      <label for="qrdata">Enter Data:</label><br>
+      <input type="text" name="qrdata" id="qrdata" required><br>
+  
+      <small id="emailHelp" class="form-text text-muted">We  store data </small>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Generate QR Code</button>
+</form>
+ 
+</div>
+
+
+{% endblock form%}
