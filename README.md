@@ -18,6 +18,16 @@ About Page , This page provides the information about why it is created
 There is a third page QrCodes page which is not created as part of the project but created because our HOD wanted an Database connectivity just consider
 It as a project so I used Mysql to store data and also random filename crator which wirtes the random filename to create the unique ID
 
+##HOME PAGE
+![Home Page](https://github.com/pavanparashuramdevang/QRCreator/blob/main/QRCreator_Project_Photos/Home_page.jpg?raw=true)
 
-![Home Page](https://github.com/pavanparashuramdevang/QRCreator/blob/main/QRCreator_Project_Photos/About_page.png?raw=true)
+##QR CODE GENERATOR PAGE
+![QR Code Generator Page](https://github.com/pavanparashuramdevang/QRCreator/blob/main/QRCreator_Project_Photos/QRCode_generator_page.jpg?raw=true)
+
+##QR CODES FETCHED FROM DATABASE
+![QR codes](https://github.com/pavanparashuramdevang/QRCreator/blob/main/QRCreator_Project_Photos/QRCodes.jpg?raw=true)
+
+##ABOUT PAGE
+![About Page](https://github.com/pavanparashuramdevang/QRCreator/blob/main/QRCreator_Project_Photos/About_page.png?raw=true)
+
 
