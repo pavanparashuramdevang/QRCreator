@@ -30,4 +30,8 @@ It as a project so I used Mysql to store data and also random filename crator wh
 ##ABOUT PAGE
 ![About Page](https://github.com/pavanparashuramdevang/QRCreator/blob/main/QRCreator_Project_Photos/About_page.png?raw=true)
 
+# COLLEGE REPORTS
+your can refer the reports folder for college reports that I have submitted you can see both pdf and zip folder 
+Zip folder is for latex it can be used in overleaf website 
+
 
